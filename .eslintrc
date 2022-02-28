@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-extra-semi": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": 0, // must not be error. Try less [any] type
+    "max-len": [2, 150],
+    "prefer-template": 0,
+    "no-console": 0,
+    "semi": ["error", "always"],
+    "disable-next-line": [0, "no-trailing-whitespace"],
+    "max-classes-per-file": 2,
+    "no-extra-semi": "error",
+    "no-unused-vars": "off"
+  }
+}
